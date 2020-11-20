@@ -795,7 +795,7 @@ public class WABCFW {
 
     }
 
-    public static class DominatingTextReader extends
+    public static class WABCTextReader extends
             VertexInputReader<LongWritable, Text, Text, NullWritable, ArrayWritable> {
 
         @Override
@@ -816,7 +816,7 @@ public class WABCFW {
         }
     }
 
-    public static class DominatingPagerankJsonReader extends
+    public static class WABCJsonReader extends
             VertexInputReader<LongWritable, Text, Text, TextPair, CustomMapWritable> {
 
         @SuppressWarnings("unchecked")
@@ -854,7 +854,7 @@ public class WABCFW {
 
         if (!cliParser.hasOption("i") || !cliParser.hasOption("o")) {
             System.out
-                    .println("No input or output path specified for DominatingSet, exiting.");
+                    .println("No input or output path specified for WABC, exiting.");
         }
 
         GraphJob pageJob = new GraphJob(conf, WABCFW.class);
@@ -880,16 +880,16 @@ public class WABCFW {
         // Vertex reader handle it differently.
         if (cliParser.hasOption("f")) {
             if (cliParser.getOptionValue("f").equals("text")) {
-                pageJob.setVertexInputReaderClass(DominatingTextReader.class);
+                pageJob.setVertexInputReaderClass(WABCTextReader.class);
             } else if (cliParser.getOptionValue("f").equals("json")) {
-                pageJob.setVertexInputReaderClass(DominatingPagerankJsonReader.class);
+                pageJob.setVertexInputReaderClass(WABCJsonReader.class);
             } else {
-                System.out.println("File type is not available to run DominatingSet... "
+                System.out.println("File type is not available to run WABC... "
                         + "File type set default value, Text.");
-                pageJob.setVertexInputReaderClass(DominatingTextReader.class);
+                pageJob.setVertexInputReaderClass(WABCTextReader.class);
             }
         } else {
-            pageJob.setVertexInputReaderClass(DominatingTextReader.class);
+            pageJob.setVertexInputReaderClass(WABCTextReader.class);
         }
 
         pageJob.setVertexIDClass(Text.class);
