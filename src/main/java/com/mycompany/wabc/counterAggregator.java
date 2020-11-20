@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.pageramk;
+package com.mycompany.wabc;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hama.graph.AbstractAggregator;

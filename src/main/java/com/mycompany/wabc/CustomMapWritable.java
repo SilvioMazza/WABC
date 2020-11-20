@@ -1,4 +1,4 @@
-package com.mycompany.pageramk;
+package com.mycompany.wabc;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -7,7 +7,6 @@ package com.mycompany.pageramk;
  */
 
 
-import static com.mycompany.pageramk.IndependentCascade.INFLUENCED_BY;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.MapWritable;
 
@@ -31,6 +30,7 @@ public class CustomMapWritable extends MapWritable {
     static int ACTIVATE = 1;
     static int UPDATE_INFLUENCE = 2;
     static int ACTIVATION_INFO = 3;
+    static int INFLUENCED_BY = 3;
 
     @Override
     public String toString() {
