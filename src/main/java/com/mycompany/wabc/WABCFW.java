@@ -45,56 +45,56 @@ import org.json.simple.parser.JSONParser;
  */
 public class WABCFW {
     //max number of superstep for the graph job
-    static int NUM_ITERATION = -1;
-    static Text master = new Text("-1");
+    private static int NUM_ITERATION = -1;
+    private static Text master = new Text("-1");
     // field that establishes if a node is initially selected as seed
-    static int IS_SEED = 0;
+    private static int IS_SEED = 0;
     // field to get the rank of a node
-    static int RANK = 1;
+    private static int RANK = 1;
     // fielt to get the seed list
-    static int MASTER_SEED_LIST_INDEX = 2;
+    private static int MASTER_SEED_LIST_INDEX = 2;
     // field to get the neighb.
-    static int NEIGH_SET_INDEX = 3;
+    private static int NEIGH_SET_INDEX = 3;
     // field to get the type of the message
-    static int TYPE_MESSAGE = 4;
+    private static int TYPE_MESSAGE = 4;
     // field to get the sender of a message
-    static int SENDER_NODE = 5;
+    private static int SENDER_NODE = 5;
     // field to send dei list of neigh.
-    static int NEIGH_LIST = 6;
+    private static int NEIGH_LIST = 6;
     // fielt to get the seed list of the master
-    static int SEED_POINTER = 7;
+    private static int SEED_POINTER = 7;
     // field to get the influenced nodes
-    static int INFLUENCED_INDEX = 8;
+    private static int INFLUENCED_INDEX = 8;
     // field to signal if a node is influenced
-    static int INFLUENCED_NODE = 9;
+    private static int INFLUENCED_NODE = 9;
     // field to get the influence source
-    static int INFLUENCE_SOURCE = 10;
+    private static int INFLUENCE_SOURCE = 10;
     // field to get ranking
-    static int RANKING_INDEX = 11;
+    private static int RANKING_INDEX = 11;
     // field of neigh for submap
-    static int NEIGH_ACCESS_LIST = 12;
+    private static int NEIGH_ACCESS_LIST = 12;
     // field to know if the propagation is running
-    static int IS_RUNNING_PROPAGATION = 13;
+    private static int IS_RUNNING_PROPAGATION = 13;
     // field to get the switch SB - EB map
-    static int SWITCH_NODE_INFLUENCE = 14;
+    private static int SWITCH_NODE_INFLUENCE = 14;
     // field to get the switched node
-    static int SWITCH_NAME_NODE = 15;
+    private static int SWITCH_NAME_NODE = 15;
     // field to establishes if there's a switch
-    static int SWITCH_EVAL = 16;
+    private static int SWITCH_EVAL = 16;
     // field to establishes if there's convergence
-    static int CONV_SWITCH = 17;
+    private static int CONV_SWITCH = 17;
     // fieldo to get maximum distance
-    static int DISTANCE_INDEX = 18;
+    private static int DISTANCE_INDEX = 18;
     // field to know if a node has already know the propagation strength of source node
-    static int PROPAGATION_DONE = 19;
+    private static int PROPAGATION_DONE = 19;
     // field to know if boot is completed
-    static int ALL_SEED_SELECTED = 20;
+    private static int ALL_SEED_SELECTED = 20;
     // field to get the maximum number of neigh.
-    static int NEIGH_NUMBER = 21;
+    private static int NEIGH_NUMBER = 21;
     // field to get the probability of influence
-    static int PROBABILITY_INDEX=22;
+    private static int PROBABILITY_INDEX=22;
     // field to get the previous convergence value
-    static int OLD_VAL=23;
+    private static int OLD_VAL=23;
     
     
     
@@ -103,27 +103,27 @@ public class WABCFW {
     
     
     // cutting parameter for the number of neigh that will be evaluated
-    static int MAX_NEIGH = Integer.MAX_VALUE;
+    private static int MAX_NEIGH = Integer.MAX_VALUE;
 
     //index value
-    static int ACTIVATION_MESSAGE = 0;
-    static int ACTIVATE = 1;
-    static int UPDATE_INFLUENCE = 2;
-    static int ACTIVATION_INFO = 3;
-    static int UPDATE_DATA = 4;
+    private static int ACTIVATION_MESSAGE = 0;
+    private static int ACTIVATE = 1;
+    private static int UPDATE_INFLUENCE = 2;
+    private static int ACTIVATION_INFO = 3;
+    private static int UPDATE_DATA = 4;
    
     // if false the neigh list is not sorted on the basis of ranking
-    static boolean topForNeigh=false;
+    private static boolean topForNeigh=false;
     // establish the number of neigh. to be evaluated
-    static int number_of_top=Integer.MAX_VALUE;
+    private static int number_of_top=Integer.MAX_VALUE;
     // if distance is > 0 the influence chains is breaked after $distance step
-    static int DISTANCE = -1;
+    private static int DISTANCE = -1;
     // number of seed 
-    static int k = 15;
+    private static int k = 15;
     //Omega value
-    static double STOPPING_PERC_VALUE = 0.02;
+    private static double STOPPING_PERC_VALUE = 0.02;
     // if false the fitness eval has no weight, a seed that influences another node has +1 in F.Eval
-    static boolean weightedAlgorithm=true;
+    private static boolean weightedAlgorithm=true;
     
     //number of trial for a node to influence a neigh.
     private static int limit=1;
